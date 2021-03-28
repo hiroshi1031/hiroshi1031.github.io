@@ -323,7 +323,7 @@ ul {
     -ms-align-items: center;
     align-items: center;
     background-size: auto 100%;
-    background: url(img/header_img1.jpg) center center;
+    background: url(header_img1.jpg) center center;
 }
 #header .logo {
     display: block;

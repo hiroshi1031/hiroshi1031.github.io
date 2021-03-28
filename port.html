@@ -3,10 +3,26 @@
 <head>
     <title></title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="author" content="Hiroshi Toi">
     <meta name="description" content="Hiroshi Toiのポートフォリオです。">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script>
+        $(function(){
+        // #で始まるリンクをクリックしたら実行されます
+            $('a[href^="#"]').click(function() {
+          // スクロールの速度
+                let speed = 400; // ミリ秒で記述
+                let href= $(this).attr("href");
+                let target = $(href == "#" || href == "" ? 'html' : href);
+                let position = target.offset().top;
+                $('body,html').animate({scrollTop:position}, speed, 'swing');
+                return false;
+            });
+        });
+    </script>
     <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -19,14 +35,13 @@
                 <span class="logo-desc"> Web Engineer</span>
             </h1>
         </header>
-        <nav id="gnav">
+       <nav id="gnav">
             <ul>
                 <li><a href="#Profile">PROFILE</a></li>
                 <li><a href="#skill">SKILL</a></li>
                 <li><a href="#works">WORKS</a></li>
             </ul>
         </nav>
-
         <div class="inner">
             <div id="Profile">
                 <h3>PROFILE</h3>
